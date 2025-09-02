@@ -10,10 +10,10 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.4")
+        classpath("com.android.tools.build:gradle:8.7.3")
         // Cloudstream gradle plugin which makes everything work and builds plugins
         classpath("com.github.recloudstream:gradle:master-SNAPSHOT")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
     }
 }
 
@@ -44,6 +44,7 @@ subprojects {
 
     android {
         compileSdkVersion(35)
+        namespace = "com.stormunblessed"
 
         defaultConfig {
             minSdk = 21
@@ -85,7 +86,7 @@ subprojects {
 
         //run JS
         implementation("org.mozilla:rhino:1.7.14")
-        implementation("com.github.Marplex:CloudflareBypass:1.3.2")
+        //implementation("com.github.Marplex:CloudflareBypass:1.3.2") // Temporarily disabled - dependency not available
     }
 }
 
